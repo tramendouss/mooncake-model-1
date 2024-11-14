@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Model in AR</title>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+        model-viewer {
+            width: 90%;
+            height: 90vh; /* Change height to suit your needs */
+        }
+    </style>
+</head>
+<body>
+    <h1>View the 3D Model in Augmented Reality</h1>
+
+    <model-viewer 
+        src="https://raw.githubusercontent.com/tramendouss/mooncake-model-1/refs/heads/main/scene.gltf" 
+        alt="3D Model"
+        auto-rotate
+        camera-controls
+        ar 
+        ar-modes="webxr scene-viewer quick-look ios-app">
+    </model-viewer>
+
+    <p>Tap the AR icon to view in Augmented Reality.</p>
+
+</body>
+</html>
